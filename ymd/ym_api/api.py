@@ -10,7 +10,7 @@ MD5_SALT = "XGRlBW9FXlekgbPrRHuSiA"
 
 def get_track_download_url(session: Session, track: BasicTrackInfo, hq: bool) -> str:
     resp = session.get(
-        "https://music.yandex.ru/api/v2.1/handlers/track"
+        "https://music.yandex.com/api/v2.1/handlers/track"
         f"/{track.id}:{track.album.id}"
         "/web-album_track-track-track-main/download/m"
         f"?hq={int(hq)}"
